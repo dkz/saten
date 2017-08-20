@@ -14,7 +14,7 @@ public final class StorageKey<C extends Serializable> implements Serializable {
     private final int[] hash;
 
     public static <C extends Serializable> StorageKey<C> create(Class<C> type, Serializable discriminator) {
-        return new StorageKey<>(type, discriminator, new int[0]);
+        return new StorageKey<>(type, discriminator, new int[] { discriminator.hashCode() });
     }
 
     public static <C extends Serializable> StorageKey<C> create(Class<C> type, Serializable discriminator, Object... path) {

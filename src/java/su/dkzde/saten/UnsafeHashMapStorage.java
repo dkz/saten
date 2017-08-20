@@ -9,7 +9,7 @@ import java.util.*;
  * Consists of single {@code HashMap} which is used as a storage for instances.
  * @author Dmitry Kozlov
  */
-public final class UnsafeHashMapStorage implements WritableStorage, ReadableStorage, Serializable {
+public final class UnsafeHashMapStorage implements ReadWriteStorage, Serializable {
 
     private final Map<StorageKey, Serializable> store;
 

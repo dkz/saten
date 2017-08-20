@@ -42,7 +42,7 @@ public class IOWritableStorageTest {
 
     @Test public void testInstanceOpeationsSnapshotRecovery() throws IOException {
         StorageKey<Integer> one = StorageKey.create(Integer.class, "one");
-        StorageKey<Integer> two = StorageKey.create(Integer.class, "one");
+        StorageKey<Integer> two = StorageKey.create(Integer.class, "two");
 
         storage.instancePut(one, 1);
         calendar.add(Calendar.MINUTE, 2);
